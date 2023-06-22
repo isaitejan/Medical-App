@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import CardComp from './CardComp';
-import {  useSelector, useDispatch } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 import { addBill } from '../store/medicalSlice';
 import { store } from "../store/store";
 
 
 export default function AddForm() {
 
-  // const bills = useSelector((state)=>state.bills);
   const dispatch = useDispatch();
   
   const [formData, setFormData] = useState({

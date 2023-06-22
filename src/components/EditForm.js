@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CardComp from './CardComp';
-import {  useSelector, useDispatch } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 import { editBillObject, editButtonClick } from '../store/medicalSlice';
 import { store } from "../store/store";
 import { useNavigate } from 'react-router-dom';
