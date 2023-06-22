@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <Navbar className='bg-primary text-white'>
       <Container>
-        <Navbar.Brand className='bg-primary text-white' ><Link to='/' onClick={()=>dispatch(editButtonClick(false))} style={{textDecoration:'none',color:'white'}}>Medical Bill Tracker</Link></Navbar.Brand>
+        <Navbar.Brand className='bg-primary text-white' ><Link to='/Medical-App' onClick={()=>dispatch(editButtonClick(false))} style={{textDecoration:'none',color:'white'}}>Medical Bill Tracker</Link></Navbar.Brand>
         <Navbar.Toggle />
       </Container>
     </Navbar>
