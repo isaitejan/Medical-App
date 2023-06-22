@@ -3,11 +3,13 @@ import CardComp from './CardComp';
 import {  useDispatch } from 'react-redux';
 import { addBill } from '../store/medicalSlice';
 import { store } from "../store/store";
+import { useNavigate } from 'react-router-dom';
 
 
 export default function AddForm() {
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   
   const [formData, setFormData] = useState({
     patientName: '',
@@ -51,6 +53,11 @@ export default function AddForm() {
     dispatch(addBill({...formData, billId:store.getState().medicalStore.bills.length+1}));
   };
 
+  const handleHome = (e)=>{
+    e.preventDefault();
+    navigate('/Medical-App')
+  }
+
   return (
     <div className='container'>
         <div className='row'>
@@ -81,7 +88,10 @@ export default function AddForm() {
               <label>Bill Image:</label>
               <input type="file" onChange={handleImageChange} className="form-control" name='billImage'/>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <div className='m-1'>
+            <button type="submit" className="btn btn-primary m-1">Submit</button>
+            <button type="button" onClick={handleHome} className="btn btn-primary m-1">Go Home</button>
+            </div>
           </form>
         </div>
         <div className='col-md-6'>

@@ -48,6 +48,11 @@ export default function EditForm() {
     navigate('/AddBill');
   };
 
+  const handleHome = (e)=>{
+    e.preventDefault();
+    navigate('/Medical-App')
+  }
+
   return (
     <div className='container'>
         <div className='row'>
@@ -78,7 +83,10 @@ export default function EditForm() {
               <label>Bill Image:</label>
               <input type="file" onChange={handleImageChange} className="form-control" />
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <div className='m-1'>
+            <button type="submit" className="btn btn-primary m-1">Submit</button>
+            <button type="button" onClick={handleHome} className="btn btn-primary m-1">Go Home</button>
+            </div>
           </form>
         </div>
         <div className='col-md-6'>

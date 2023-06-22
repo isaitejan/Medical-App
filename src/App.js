@@ -12,6 +12,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
+        <Route path='/' element={<Main />} />
           <Route path='/Medical-App' element={<Main />} />
           <Route path='/AddBill' element={<AddForm />} />
           <Route path='/EditForm' element={<EditForm />} />
