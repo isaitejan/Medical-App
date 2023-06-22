@@ -22,6 +22,7 @@ export default function AddForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  
   const handleImageChange = (e) => {
     try{
       const file = e.target.files[0];
@@ -58,27 +59,27 @@ export default function AddForm() {
           <form onSubmit={handleSubmit} className="mt-4">
             <div className="form-group p-1">
               <label>Patient Name:</label>
-              <input type="text" name="patientName" value={formData.patientName} onChange={handleChange} className="form-control" />
+              <input type="text" name="patientName" value={formData.patientName} onChange={handleChange} className="form-control" required='true'/>
             </div>
             <div className="form-group p-1">
               <label>Address:</label>
-              <input type="text" name="address" value={formData.address} onChange={handleChange} className="form-control" />
+              <input type="text" name="address" value={formData.address} onChange={handleChange} className="form-control" required='true'/>
             </div>
             <div className="form-group p-1">
               <label>Hospital Name:</label>
-              <input type="text" name="hospitalName" value={formData.hospitalName} onChange={handleChange} className="form-control" />
+              <input type="text" name="hospitalName" value={formData.hospitalName} onChange={handleChange} className="form-control" required='true'/>
             </div>
             <div className="form-group p-1">
               <label>Date of Service:</label>
-              <input type="date" name="dateOfService" value={formData.dateOfService} onChange={handleChange} className="form-control" />
+              <input type="date" name="dateOfService" value={formData.dateOfService} onChange={handleChange} className="form-control" required='true'/>
             </div>
             <div className="form-group p-1">
               <label>Bill Amount:</label>
-              <input type="text" name="billAmount" value={formData.billAmount} onChange={handleChange} className="form-control" />
+              <input type="number" name="billAmount" value={formData.billAmount} onChange={handleChange} className="form-control" required='true'/>
             </div>
             <div className="form-group  p-1">
               <label>Bill Image:</label>
-              <input type="file" onChange={handleImageChange} className="form-control" />
+              <input type="file" onChange={handleImageChange} className="form-control" name='billImage'/>
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
           </form>
