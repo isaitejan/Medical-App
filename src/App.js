@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import EditForm from './components/EditForm';
 import AddForm from './components/AddForm';
+import Main from './components/Main';
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          {/* <Route path='/' element={<Home />} /> */}
-          <Route path='/' element={<AddForm />} />
+          <Route path='/' element={<Main />} />
+          <Route path='/AddBill' element={<AddForm />} />
           <Route path='/EditForm' element={<EditForm />} />
         </Routes>
       </BrowserRouter>

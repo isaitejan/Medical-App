@@ -20,7 +20,7 @@ export default function CardComp(props) {
 
     return (
       <div>
-      <div className='card'>
+      <div className='card m-1'>
         <div className='row no-gutters'>
           <div className='col-md-4'>
             <p className='card-text p-3'>{`Bill ID: ${props.bill_obj.billId}`}</p>

@@ -45,7 +45,7 @@ export default function EditForm() {
     dispatch(editBillObject({...formData, billId:store.getState().medicalStore.editButtonData.billId}));
     dispatch(editButtonClick(false));
 
-    navigate('/');
+    navigate('/AddBill');
   };
 
   return (
